@@ -40,7 +40,7 @@ export default function App() {
 
   function deleteContact(id) {
     setContacts((prevContacts) => {
-      prevContacts.filter((contact) => contact.id !== id)
+      return prevContacts.filter((contact) => contact.id !== id)
     })
   }
 
@@ -55,6 +55,8 @@ export default function App() {
       contact.name.toLowerCase().includes(normalizedFilter),
     )
   }
+  console.log(filter)
+  console.log(contacts)
 
   return (
     <PageWrapper>
